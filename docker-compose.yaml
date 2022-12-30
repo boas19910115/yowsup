@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  yowsup-lib:
+    container_name: yowsup-lib
+    image: yowsup-lib-img
+    working_dir: /workspace
+    build:
+      context: .
+      dockerfile: dockerfile
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./configs:/workspace/configs
